@@ -1,0 +1,12 @@
+name: create-folder
+
+on: push
+
+jobs:
+  create-folder-job:
+    runs-on: windows-latest
+
+    steps:
+      - name: Create folder in C drive
+        run: New-Item -ItemType Directory -Path 'C:\NewFolder'
+        shell: pwsh
